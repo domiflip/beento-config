@@ -1,0 +1,13 @@
+{
+    "configVersion": "v1",
+    "appId": "app.treefox.beento",
+    "conditions": {
+      "namedConditions": {
+        "ab_test_assignment_feature_flag": "stableRand() % 2 == 0",
+        "weather_warm": "weather_approx_location_temperature > 20",
+        "battery_low": "device_battery_level < 0.2",
+        "battery_not_low": "device_battery_level >= 0.2"
+      }
+    }
+}
+
