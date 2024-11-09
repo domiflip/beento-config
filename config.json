@@ -3,7 +3,8 @@
     "appId": "app.treefox.beento",
     "conditions": {
       "namedConditions": {
-        "new_onboarding_2024_11": "stableRand() % 2 == 0"
+        "new_onboarding_2024_11": "stableRand() % 2 == 0",
+        "random": "rand() % 2 == 0"
       }
     }
 }
