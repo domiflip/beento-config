@@ -4,7 +4,8 @@
     "conditions": {
       "namedConditions": {
         "new_onboarding_2024_11": "stableRand() % 2 == 0",
-        "random": "rand() % 2 == 0"
+        "random": "rand() % 2 == 0",
+        "testing": "stableRand() % 2 == 0"
       }
     }
 }
