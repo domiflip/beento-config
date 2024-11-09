@@ -3,10 +3,7 @@
     "appId": "app.treefox.beento",
     "conditions": {
       "namedConditions": {
-        "ab_test_assignment_feature_flag": "stableRand() % 2 == 0",
-        "battery_low": "device_battery_level < 0.2",
-        "battery_not_low": "device_battery_level >= 0.2",
-        "just_random": "rand() % 2 == 0"
+        "new_onboarding_2024_11": "stableRand() % 2 == 0"
       }
     }
 }
