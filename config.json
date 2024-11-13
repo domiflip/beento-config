@@ -2,11 +2,56 @@
     "configVersion": "v1",
     "appId": "app.treefox.beento",
     "conditions": {
-      "namedConditions": {
-        "new_onboarding_2024_11": "stableRand() % 2 == 0",
-        "random": "rand() % 2 == 0",
-        "testing": "stableRand() % 2 == 0"
-      }
+        "namedConditions": {
+            "random": "rand() % 2 == 0",
+            "stableRandom": "stableRand() % 2 == 0"
+        }
+    },
+    "actions": {
+        "namedActions": {
+            "smartReviewAction": {
+                "actionType": "alert",
+                "condition": "device_battery_level > 0.2 && !device_low_power_mode && has_active_network && !low_data_mode && device_orientation != 'face_up' && device_orientation != 'face_down' && foreground && !other_audio_playing && !on_call && !has_car_audio && (eventCount('ask_for_review') == 0 || latestEventTime('ask_for_review') < now() - duration('1008h')) && app_install_date < now() - duration('168h')",
+                "actionData": {
+                    "title": "Enjoying Been To?",
+                    "message": "If you’re enjoying Been To, we would greatly appreciate an app review!\n\nIf you are having an issue, our support team is here to help!",
+                    "showOkButton": false,
+                    "showCancelButton": false,
+                    "customButtons": [
+                        {
+                            "label": "Rate Us",
+                            "actionName": "system_app_review",
+                            "style": "primary"
+                        },
+                        {
+                            "label": "Contact Us",
+                            "actionName": "help_page"
+                        },
+                        {
+                            "label": "Not Now"
+                        }
+                    ]
+                }
+            },
+            "system_app_review": {
+                "actionType": "review_prompt",
+                "actionData": {}
+            },
+            "help_page": {
+                "actionType": "link",
+                "actionData": {
+                    "url": "mailto:dev@treefox.app"
+                }
+            }
+        }
+    },
+    "triggers": {
+        "namedTriggers": {
+            "completedTaskReviewTrigger": {
+                "eventName": "completed_task",
+                "actionName": "smartReviewAction",
+                "condition": "eventCount('completed_task') >= 1"
+            }
+        }
     }
 }
-
