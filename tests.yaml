@@ -3,7 +3,7 @@
 
 newOnboardingFlow:
   description: "Tests a new multi-step onboarding vs the original single screen. Change3"
-  isActive: true
+  isActive: false
   variants:
     - name: "control"
       weight: 50
