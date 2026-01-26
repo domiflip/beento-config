@@ -15,4 +15,4 @@
 experiments: []
 featureFlags:
   - name: "send_trial_attribution"
-    enabled: false
+    enabled: true
