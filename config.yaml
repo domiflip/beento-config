@@ -13,7 +13,7 @@
 
 #Make sure experiments and featureFlags both have items or are defined as [] 
 experiments:
-  - name: "20260109fogBlur"
+  - id: "20260109fogBlur"
     enabled: false
 featureFlags:
   - name: "send_trial_attribution"
