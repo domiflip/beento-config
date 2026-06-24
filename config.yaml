@@ -13,8 +13,9 @@
 
 #Make sure experiments and featureFlags both have items or are defined as [] 
 experiments:
-  - id: "experiment1.3.5pastTrips"
-    enabled: false
+  - id: "experiment1.4.3tabViewNavigation"
+    enabled: true
+    rollout_percent: 100
 featureFlags:
   - name: "send_trial_attribution"
     enabled: true
