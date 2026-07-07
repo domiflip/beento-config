@@ -19,3 +19,5 @@ experiments:
 featureFlags:
   - name: "send_trial_attribution"
     enabled: true
+  - name: "show_discord_link"
+    enabled: true
