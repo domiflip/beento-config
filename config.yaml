@@ -16,6 +16,8 @@ experiments:
   - id: "experiment1.4.3tabViewNavigation"
     enabled: true
     rollout_percent: 100
+  - id: "experiment1.4.6overtureAreas"
+    enabled: false
 featureFlags:
   - name: "send_trial_attribution"
     enabled: true
